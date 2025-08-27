@@ -158,7 +158,7 @@ themeToggle.addEventListener("click", () => {
 
 // contact form started
 const loading = document.getElementById("status");
-document.getElementById('contact-form').addEventListener('submit', (e) => {
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
   loading.textContent = "Sending...";
 
   e.preventDefault();
@@ -174,8 +174,10 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
     thought,
     message
   }
-  console.log(templateParams)
-  emailjs.send("service_awfmp2r", "template_935xakn", templateParams);
+
+
+  const result = await emailjs.send("service_awfmp2r", "template_935xakn", templateParams);
+  console.log(result)
   e.target.reset();
   loading.textContent = "Message sent ✅";
 });

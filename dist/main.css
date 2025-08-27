@@ -721,6 +721,9 @@
   .whitespace-nowrap {
     white-space: nowrap;
   }
+  .text-neutral-1 {
+    color: var(--color-neutral-1);
+  }
   .text-neutral-2 {
     color: var(--color-neutral-2);
   }
