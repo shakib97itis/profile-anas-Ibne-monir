@@ -1,0 +1,17 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./style/main.css -o ./dist/main.css --watch",
+    "build": "npx tailwindcss -i ./style/main.css -o ./dist/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}

@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #ddf4e7;
+  --color-secondary: #67c090;
+  --color-tertiary: #26667f;
+  --color-quaternary: #124170;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-neutral-1: #525252;
+  --color-neutral-2: #414141;
+  --color-neutral-3: #313131;
+}
+
+/* Dark theme */
+:root.dark {
+  --color-primary: #1e2b23; /* dark background version of light primary */
+  --color-secondary: #4ea67a; /* softer green for highlights */
+  --color-tertiary: #5ab7d1; /* lighter teal for contrast */
+  --color-quaternary: #8db4d9; /* muted sky blue for accents */
+
+  --color-white: #eaeaea; /* off-white, less harsh than pure white */
+  --color-black: #0b0b0b; /* very dark gray instead of pure black */
+
+  --color-neutral-1: #e0e0e0; /* light gray */
+  --color-neutral-2: #f0f0f0; /* softer, closer to white */
+  --color-neutral-3: #fafafa; /* almost white, for backgrounds */
+}
+
+@theme {
+  --font-primary: "Noto Sans Bengali", sans-serif;
+  --font-secondary: "Noto Serif Bengali", serif;
+
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-tertiary: var(--color-tertiary);
+  --color-quaternary: var(--color-quaternary);
+  --color-quinary: var(--color-quinary);
+
+  --color-white: var(--color-white);
+  --color-black: var(--color-black);
+
+  --color-neutral-1: var(--color-neutral-1);
+  --color-neutral-2: var(--color-neutral-2);
+  --color-neutral-3: var(--color-neutral-3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== BASE STYLES START ===== */
+
+.container-fluid {
+  max-width: 1440px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-base {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ===== BASE STYLES END ===== */
+
+/* marquee start */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+/* marquee end */
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  color: #333;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  background: #4f46e5; /* Indigo */
+  color: #fff;
+  transform: scale(1.1);
+}
