@@ -1,54 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #ddf4e7;
-  --color-secondary: #67c090;
-  --color-tertiary: #26667f;
-  --color-quaternary: #124170;
+  --color-primary: #2a9d8f; /* Primary UI color - used for buttons, highlights, links */
+  --color-secondary: #264653; /* Heading text - H1, H2, strong emphasis text */
+  --color-tertiary: #e9c46a; /* Titles, subheadings, emphasis text - gold for leadership tone */
+  --color-quaternary: #f4a261; /* Accent elements - buttons, icons, call-to-actions (CTAs) */
 
-  --color-white: #ffffff;
-  --color-black: #000000;
+  --color-White: #ffffff; /* Background or light text on dark elements */
+  --color-Black: #121212; /* Primary text color for content, headings, and body */
 
-  --color-neutral-1: #525252;
-  --color-neutral-2: #414141;
-  --color-neutral-3: #313131;
+  --color-neutral-1: #5a5a5a; /* Body text - used for paragraphs, long-form content */
+  --color-neutral-2: #d5d5d5; /* Secondary text - used for metadata, timestamps, labels */
+  --color-neutral-3: #b0b0b0; /* UI elements - borders, dividers, muted icons */
 }
 
 /* Dark theme */
 :root.dark {
-  --color-primary: #1e2b23; /* dark background version of light primary */
-  --color-secondary: #4ea67a; /* softer green for highlights */
-  --color-tertiary: #5ab7d1; /* lighter teal for contrast */
-  --color-quaternary: #8db4d9; /* muted sky blue for accents */
+  --color-primary: #0e1116; /* Page background - dark, premium base */
+  --color-secondary: #264653; /* Heading text - H1, H2, strong section headers */
+  --color-tertiary: #e9c46a; /* Titles and key highlights - draws attention, leadership color */
+  --color-quaternary: #f4a261; /* Accent elements - buttons, badges, CTAs, icons */
 
-  --color-white: #eaeaea; /* off-white, less harsh than pure white */
-  --color-black: #0b0b0b; /* very dark gray instead of pure black */
+  --color-White: #f4f4f4; /* Main text color - used on dark background for readability */
+  --color-Black: #0a0a0a; /* Deep black - optional for containers or overlays */
 
-  --color-neutral-1: #e0e0e0; /* light gray */
-  --color-neutral-2: #f0f0f0; /* softer, closer to white */
-  --color-neutral-3: #fafafa; /* almost white, for backgrounds */
+  --color-neutral-1: #c1c1c1; /* Body text - paragraphs, descriptions */
+  --color-neutral-2: #a0a0a0; /* Secondary text - captions, timestamps, labels */
+  --color-neutral-3: #808080; /* Muted UI - dividers, borders, less visible icons */
+}
+
+@font-face {
+  font-family: "li_ador_noirritbold";
+  src: url("./../fonts/li_ador_noirrit_bold-webfont.woff2") format("woff2"),
+    url("./../fonts/li_ador_noirrit_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "li_ador_noirritregular";
+  src: url("./../fonts/li_ador_noirrit_regular-webfont.woff2") format("woff2"),
+    url("./../fonts/li_ador_noirrit_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "li_ador_noirritlight";
+  src: url("./../fonts//li_ador_noirrit_light-webfont.woff2") format("woff2"),
+    url("./../fonts/li_ador_noirrit_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "li_shadhinata_2.0_unicodeIt";
+  src: url("./../dist/li_shadhinata_2.0_unicode_italic-webfont.woff2")
+      format("woff2"),
+    url("./../dist/li_shadhinata_2.0_unicode_italic-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "li_shadhinata_2.0_unicodeRg";
+  src: url("./../fonts/li_shadhinata_2.0_unicode-webfont.woff2") format("woff2"),
+    url("./../fonts/li_shadhinata_2.0_unicode-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @theme {
-  --font-primary: "Noto Sans Bengali", sans-serif;
-  --font-secondary: "Noto Serif Bengali", serif;
+  --font-primary-bold: "li_ador_noirritbold", sans-serif;
+  --font-primary: "li_ador_noirritregular", sans-serif;
+  --font-primary-light: "li_ador_noirritlight", sans-serif;
+
+  --font-secondary: "li_shadhinata_2.0_unicodeRg", serif;
+  /* --font-secondary-italic: "li_shadhinata_2.0_unicodeIt", serif; */
 
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
   --color-tertiary: var(--color-tertiary);
   --color-quaternary: var(--color-quaternary);
-  --color-quinary: var(--color-quinary);
 
-  --color-white: var(--color-white);
-  --color-black: var(--color-black);
+  --color-White: var(--color-white);
+  --color-Black: var(--color-black);
 
   --color-neutral-1: var(--color-neutral-1);
   --color-neutral-2: var(--color-neutral-2);
   --color-neutral-3: var(--color-neutral-3);
+  --color-Gray-100: var(--color-gray-100);
 }
 
 html {
   scroll-behavior: smooth;
+}
+body {
+  background-color: var(--color-primary);
 }
 
 /* ===== BASE STYLES START ===== */

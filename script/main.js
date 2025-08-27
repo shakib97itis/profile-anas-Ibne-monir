@@ -130,3 +130,53 @@ scrollBtn.addEventListener("click", () => {
 });
 // scroll top button ended
 
+// theme toggle functionality implementation start
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
+const root = document.documentElement;
+
+if (localStorage.getItem("theme") === "dark") {
+  root.classList.add("dark");
+  themeIcon.classList.remove("fa-sun");
+  themeIcon.classList.add("fa-moon");
+}
+
+themeToggle.addEventListener("click", () => {
+  if (root.classList.contains("dark")) {
+    root.classList.remove("dark");
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+    localStorage.setItem("theme", "light");
+  } else {
+    root.classList.add("dark");
+    themeIcon.classList.remove("fa-sun");
+    themeIcon.classList.add("fa-moon");
+    localStorage.setItem("theme", "dark");
+  }
+});
+// theme toggle functionality implementation end
+
+// contact form started
+const loading = document.getElementById("status");
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  loading.textContent = "Sending...";
+
+  e.preventDefault();
+
+  const name = e.target[0].value;
+  const email = e.target[1].value;
+  const thought = e.target[2].value;
+  const message = e.target[3].value;
+
+  const templateParams = {
+    name,
+    email,
+    thought,
+    message
+  }
+  console.log(templateParams)
+  emailjs.send("service_awfmp2r", "template_935xakn", templateParams);
+  e.target.reset();
+  loading.textContent = "Message sent ✅";
+});
+// contact form end
