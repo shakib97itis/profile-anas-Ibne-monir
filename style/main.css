@@ -1,11 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  /* --color-primary: #2a9d8f;
-  --color-secondary: #264653;
-  --color-tertiary: #e9c46a;
-  --color-quaternary: #f4a261; */
-
   --color-primary: #ddf4e7;
   --color-secondary: #67c090;
   --color-tertiary: #26667f;
@@ -69,17 +64,6 @@
   font-display: swap;
 }
 
-/* FONT PARAGRAPH */
-@font-face {
-  font-family: "AdorNoirrit";
-  src: local("Li Alinur Kurigram Unicode"), local("LiAlinurKurigramUnicode"),
-    url('../fonts/subset-LiAdorNoirrit.woff') format("woff"),
-    url('../fonts/subset-LiAdorNoirrit-Bold.woff2') format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 @theme {
   --font-primary: "Li Ador Noirrit", sans-serif;
   --font-secondary: "Li Alinur Sangbadpatra Unicode", sans-serif;
@@ -104,7 +88,8 @@ html {
 
 body {
   background: var(--color-tertiary);
-  /* color: var(--color-White); */
+  color: var(--color-primary);
+  font-family: var(--font-primary);
 }
 
 /* ===== BASE STYLES START ===== */
@@ -164,13 +149,12 @@ body {
 
 .bengali-numbers {
   list-style-type: bengali;
-  margin-left : 10px;
+  margin-left: 10px;
   padding: 10px;
 }
 .custom-pt {
   padding-top: 15px;
-
 }
-.custom-nab-opacity{
+.custom-nab-opacity {
   opacity: 80%;
 }
