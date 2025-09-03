@@ -176,7 +176,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
   }
 
 
-  const result = await emailjs.send("service_awfmp2r", "template_935xakn", templateParams);
+  const result = await email.send("service_awfmp2r", "template_935xakn", templateParams);
   console.log(result)
   e.target.reset();
   loading.textContent = "Message sent ✅";

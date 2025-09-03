@@ -69,6 +69,17 @@
   font-display: swap;
 }
 
+/* FONT PARAGRAPH */
+@font-face {
+  font-family: "AdorNoirrit";
+  src: local("Li Alinur Kurigram Unicode"), local("LiAlinurKurigramUnicode"),
+    url('../fonts/subset-LiAdorNoirrit.woff') format("woff"),
+    url('../fonts/subset-LiAdorNoirrit-Bold.woff2') format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-primary: "Li Ador Noirrit", sans-serif;
   --font-secondary: "Li Alinur Sangbadpatra Unicode", sans-serif;
@@ -85,7 +96,6 @@
   --color-neutral-1: var(--color-neutral-1);
   --color-neutral-2: var(--color-neutral-2);
   --color-neutral-3: var(--color-neutral-3);
-  /* --color-Gray-100: var(--color-gray-100); */
 }
 
 html {
@@ -119,10 +129,12 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
 }
+
 .animate-marquee {
   display: flex;
   animation: marquee 20s linear infinite;
@@ -144,7 +156,21 @@ body {
 }
 
 .social-icon:hover {
-  background: #4f46e5; /* Indigo */
+  background: #4f46e5;
+  /* Indigo */
   color: #fff;
   transform: scale(1.1);
+}
+
+.bengali-numbers {
+  list-style-type: bengali;
+  margin-left : 10px;
+  padding: 10px;
+}
+.custom-pt {
+  padding-top: 15px;
+
+}
+.custom-nab-opacity{
+  opacity: 80%;
 }

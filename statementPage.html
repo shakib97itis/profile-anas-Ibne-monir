@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style/main.css">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="./dist/main.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="./images/profile.png" />
+  <!-- EMAIL JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "sYI3At1AVkWAyPAyB",
+      });
+    })();
+  </script>
+  <title>আমার কিছু কথা</title>
+</head>
+
+<body class="relative font-primary text-primary">
+  <!-- NAVBAR START -->
+  <div class="fixed top-0 left-0 w-full z-50">
+    <nav class="py-4 bg-tertiary backdrop-blur-md border-b border-primary/20 shadow-lg">
+      <div class="container-fluid flex items-center justify-between ">
+        <!-- Left Side (Logo / Name) -->
+        <div class="text-xl md:text-2xl font-tertiary text-primarys">
+          <a href="#" class="hover:text-secondary transition">
+            আনাস ইবনে <span class="">মনির</span></a>
+        </div>
+
+        <div class="flex items-center gap-4 font-primary">
+          <div class="flex items-center gap-8">
+            <!-- Right Side (Menu) -->
+            <ul class="hidden md:flex space-x-8 font-medium text-primary">
+              <li>
+                <a href="index.html#profile" class="hover:text-secondary transition">প্রোফাইল</a>
+              </li>
+              <li>
+                <a href="index.html#about" class="hover:text-secondary transition">সম্পর্কে</a>
+              </li>
+              <li>
+                <a href="index.html#promises" class="hover:text-secondary transition">ইশতেহার</a>
+              </li>
+              <li>
+                <a href="index.html#achievement" class="hover:text-secondary transition">অ্যচিভমেন্ট</a>
+              </li>
+              <li>
+                <a href="index.html#contact" class="hover:text-secondary transition">যোগাযোগ</a>
+              </li>
+            </ul>
+            <!-- <button id="theme-toggle"
+              class="text-md py-1 px-2 font-sans text-primary rounded-lg border border-primary/40 cursor-pointer">
+              <i id="theme-icon" class="fa-solid fa-sun text-primary"></i>
+            </button> -->
+          </div>
+
+          <!-- Mobile Hamburger Menu -->
+          <div class="md:hidden">
+            <button id="menu-btn"
+              class="focus:outline-none relative py-1 px-1 text-primary rounded-lg border border-primary/40 cursor-pointer">
+              <!-- Hamburger Icon -->
+              <svg id="menu-open" class="w-6 h-6 block" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+
+              <!-- Close Icon -->
+              <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="overflow-hidden text-primary max-h-0 transition-all duration-300 md:hidden bg-tertiary custom-nab-opacity border-b border-primary/10 shadow-sm">
+      <div class="px-8 py-4 space-y-4">
+        <a href="index.html#profile" class="block hover:text-secondary transition">প্রোফাইল</a>
+        <a href="index.html#about" class="block hover:text-secondary transition">সম্পর্কে</a>
+        <a href="index.html#promises" class="block hover:text-secondary transition">ইশতেহার</a>
+        <a href="index.html#achievement" class="block hover:text-secondary transition">অ্যচিভমেন্ট</a>
+        <a href="index.html#contact" class="block hover:text-secondary transition">যোগাযোগ</a>
+      </div>
+    </div>
+  </div>
+  <!-- NAVBAR END -->
+
+  <!-- statement section started -->
+  <section id="statement" class=" bg-white pt-16">
+    <div class="container mx-auto px-6 lg:px-12 flex flex-col items-center">
+      <div class="mb-8 before:block before:w-24 before:h-2 before:mb-4 before:rounded-md   before:mx-auto">
+        <h3 class="text-3xl text-tertiary font-secondary text-center mb-2">আমার কিছু কথা</h3>
+        <div>
+          <p class="text-base tracking-wide text-neutral-1 text-justify">আমি আনাস ইবনে মুনির, আন্তর্জাতিক সম্পর্ক বিভাগ,
+            ২০১৯-২০ সেশনের শিক্ষার্থী। ডাকসুতে কেন্দ্রীয় ছাত্র সংসদ নির্বাচন করছি ইনশাআল্লাহ।
+
+            <b>ডাকসু করার পেছনে আমার মেইন মোটিভ হচ্ছে ক্যাম্পাসকে নির্যাতনমুক্ত ও শিক্ষার্থীবান্ধব করার আকাঙ্খা।
+              ক্যাম্পাসের শিক্ষার্থীদের মানবাধিকার নিয়ে আমি ১ম বর্ষ থেকেই কাজ করছি। আওয়ামী ফ্যাসিবাদের আমলেও গনরুম
+              গেস্টরুমের নির্যাতনের ডকুমেন্টারি করেছি।
+
+              শিক্ষার্থীর পর আমার বড় পরিচয় মানবাধিকার কর্মী। ঢাকা বিশ্ববিদ্যালয়ের হিউম্যান রাইটস ক্লাস <i>Socchar
+                Students'
+                Network</i> এর সভাপতি হিসেবে দায়িত্ব পালন করছি। প্রথম বর্ষ থেকেই আমি মানবাধিকারের জন্য কাজ করতাম।
+              ফ্যাসিবাদের
+              ঘোরতম কালো সময়ে আমরা কয়েকজন মিলে <i>Students Against Torture (SAT)</i> প্রতিষ্ঠা করি।
+
+              গনরুম, গেস্টরুম নামের আয়নাঘর ঢাকা বিশ্ববিদ্যালয়ে এখন অতীত। তবে ক্যাম্পাসে বিভিন্ন ফর্মেটে নিপীড়ন ও
+              নির্যাতন
+              এক্সিস্ট করে। স্ট্রাকচারাল ভায়োলেন্স ক্যাম্পাসে এখন শিক্ষার্থীদের মানবাধিকারের সবচেয়ে বড় কনসার্ন।
+
+              ঢাকা বিশ্ববিদ্যালয়ের শিক্ষার্থীদের মৌলিক ও মানবিক অধিকারগুলো প্রতিনিয়ত লঙ্ঘিত হচ্ছে। খাবার, বাসস্থান ও
+              চিকিৎসা এই তিন জায়গার কথা আমরা সবাই বলছি। কিন্তু প্রোপার সলুশন আসছেনা। </b>
+
+            ঢাকা বিশ্ববিদ্যালয়ে আবাসন সংকটের সমাধান না হলে স্ট্রাকচারাল ভায়োলেন্স বন্ধ হবেনা। আবাসন সংকট হচ্ছে গনরুম
+            গেস্টরুমের মত কালচারের প্রধান কারন। এছাড়া নারী শিক্ষার্থীরা আরও নানাভাবে স্ট্রাকচারাল ভায়োলেন্সের শিকার।
+            ক্যাম্পাসে বহিরাগত, মাদকসেবী ও ছিন্নমূলদের উৎপাত নারী শিক্ষার্থীদের প্রতিনিয়ত নিপীড়ন করছে।
+
+            ক্যাম্পাসে ভায়োলেন্স ছাড়াও বৈষম্য আরেকটা বড় মানবাধিকার লঙ্ঘনের জায়গা। শিক্ষার্থীদের মধ্যে সবাই সমান
+            প্রিভিলেজড না। ছেলে ও মেয়ে শিক্ষার্থীদের মধ্যে বৈষম্য, মাইনরিটি ও মেজরিটির মধ্যে বৈষম্য, আরবান ও রুরাল
+            শিক্ষার্থীদের মাঝে বৈষম্য, হলে হলে শিক্ষার্থীদের মধ্যে বৈষম্যসহ অনেক মাল্টি ডাইমেনশনাল রুপ দেখা যায়।
+
+            ক্যাম্পাসে বুলিং ও র‍্যাগিং, নারী শিক্ষার্থীদের হ্যারাসমেন্ট ইত্যাদি বিষয়ে প্রাতিষ্ঠানিক কোনো সহায়তা থাকেনা।
+            এছাড়াও শিক্ষার্থীদের একাডেমিক ও ব্যাক্তিগত জীবনে অনেক লিগ্যাল সমস্যা দেখা যায়। এসবের সমাধান করাটা প্রায়ই
+            মুশকিল হয়ে পড়ে শিক্ষার্থীদের জন্য।
+
+            সামগ্রিকভাবে ঢাকা বিশ্ববিদ্যালয় বাংলাদেশের বৃহত্তম পাবলিক বিশ্ববিদ্যালয় হয়েও শিক্ষার্থীদের মৌলিক সুবিধাটুকু
+            নিশ্চিত করতে ব্যার্থ হচ্ছে। এই জায়গাটাই হচ্ছে আমার কনসার্নিং এরিয়া। শিক্ষার্থীদের জন্য একটা নিরাপদ ও মৌলিক
+            সুবিধাসম্পন্ন ক্যাম্পাস তৈরী করাই আমার একটা স্বপ্ন।
+
+            এসব বিষয়কে সামনে রেখেই এবার ডাকসু করতে চাই। ব্যাক্তিগতভাবে আমি পাওয়ার পলিটিক্সের লোক না। মানবাধিকার কর্মী
+            হিসেবে ভ্যালু নিউট্রাল পজিশন হোল্ড করার ট্রাই করি।
+
+            আলোচ্য বিষয়গুলোই আমার মেইন ফোকাসের জায়গা। এটাই আমার ধ্যানজ্ঞান। তবে আপনাদের পরামর্শ সবচেয়ে বেশী প্রয়োজন।
+            আমাকে পরামর্শ দিয়ে সাহায্য করার অনুরোধ সকলের প্রতি। সকলের দোয়া ও সহযোগিতা চাই।
+          </p>
+
+          <div class="custom-pt bg-danger text-base tracking-wide text-neutral-1 text-justify">
+            <p class="font-bold"> আনাস ইবনে মুনির</p>
+            <p> আন্তর্জাতিক সম্পর্ক বিভাগ</p>
+            <p>স্যার এ এফ রহমান হল</p>
+            <p>২০১৯-২০ সেশন</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </section>
+  <!-- statement section started -->
+
+
+
+
+  <!-- footer section started -->
+  <footer class="bg-tertiary backdrop-blur-md border-t border-primary/20 text-primary py-6 shadow-md">
+    <div class="container-fluid flex flex-col md:flex-row items-center justify-between">
+      <!-- Left: Project Name -->
+      <div class="text-lg font-tertiary text-primary">আনাস ইবনে মনির</div>
+
+      <!-- Right: Creator -->
+      <div class="text-sm mt-3 md:mt-0 text-center md:text-right font-serif">
+        <p>© 2025. All Rights Reserved.</p>
+        <p>
+          Created by
+          <a href="https://www.facebook.com/share/14Hq36cMzAZ/" class="text-secondary font-semibold">IT Bird</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section ended -->
+
+  <!-- scroll top button started -->
+  <button id="scrollTopBtn"
+    class="fixed bottom-6 right-6 z-50 bg-tertiary hover:bg-tertiary text-white py-3 px-4 rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <!-- scroll top button ended -->
+
+  <script src="./script/main.js"></script>
+</body>
+
+</html>
