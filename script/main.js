@@ -128,40 +128,45 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
 // scroll top button ended
 
 // theme toggle functionality implementation start
-const themeToggle = document.getElementById("theme-toggle");
-const themeIcon = document.getElementById("theme-icon");
-const root = document.documentElement;
+// const themeToggle = document.getElementById("theme-toggle");
+// const themeIcon = document.getElementById("theme-icon");
+// const root = document.documentElement;
 
-if (localStorage.getItem("theme") === "dark") {
-  root.classList.add("dark");
-  themeIcon.classList.remove("fa-sun");
-  themeIcon.classList.add("fa-moon");
-}
+// if (localStorage.getItem("theme") === "dark") {
+//   root.classList.add("dark");
+//   themeIcon.classList.remove("fa-sun");
+//   themeIcon.classList.add("fa-moon");
+// }
 
-themeToggle.addEventListener("click", () => {
-  if (root.classList.contains("dark")) {
-    root.classList.remove("dark");
-    themeIcon.classList.remove("fa-moon");
-    themeIcon.classList.add("fa-sun");
-    localStorage.setItem("theme", "light");
-  } else {
-    root.classList.add("dark");
-    themeIcon.classList.remove("fa-sun");
-    themeIcon.classList.add("fa-moon");
-    localStorage.setItem("theme", "dark");
-  }
-});
+// themeToggle.addEventListener("click", () => {
+//   if (root.classList.contains("dark")) {
+//     root.classList.remove("dark");
+//     themeIcon.classList.remove("fa-moon");
+//     themeIcon.classList.add("fa-sun");
+//     localStorage.setItem("theme", "light");
+//   } else {
+//     root.classList.add("dark");
+//     themeIcon.classList.remove("fa-sun");
+//     themeIcon.classList.add("fa-moon");
+//     localStorage.setItem("theme", "dark");
+//   }
+// });
 // theme toggle functionality implementation end
 
 // contact form started
 const loading = document.getElementById("status");
-document.getElementById('contact-form').addEventListener('submit', async (e) => {
-  loading.textContent = "Sending...";
 
+const serviceID = "service_awfmp2r";
+const templateID = "template_935xakn";
+
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  loading.textContent = "Sending...";
 
   const name = e.target[0].value;
   const email = e.target[1].value;
@@ -175,9 +180,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     message
   }
 
-
-  const result = await email.send("service_awfmp2r", "template_935xakn", templateParams);
-  console.log(result)
+  const result = await emailjs.send(serviceID, templateID, templateParams);
   e.target.reset();
   loading.textContent = "Message sent ✅";
 });
